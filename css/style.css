@@ -27,9 +27,6 @@ body, html, h1, h2, h3, h4, h5, h6, p, a, span, div, button, input, select, text
 
 a {
     color: #E26B6B;
-    -webkit-transition: all 0.5s;
-    -moz-transition: all 0.5s;
-    -o-transition: all 0.5s;
     transition: all 0.5s;
     border-bottom: 1px dashed;
     outline: none !important;
@@ -282,13 +279,9 @@ table {
 }
 .box-hover {
     transition: all 500ms ease-in-out;
-    -webkit-transition: all 500ms ease-in-out;
-    -moz-transition: all 500ms ease-in-out;
-    -o-transition: all 500ms ease-in-out;
 }
 .box-hover:hover, .box-hover:focus {
     transform: translate(0, -15px);
-    -webkit-transform: translate(0, -15px);
 }
 .wrapper {
     height: 650px;
@@ -304,7 +297,7 @@ table {
 .menu-wrap a {
     color: #E26B6B;
     outline: none !important;
-    transition: color 0.3s ease-in-out; /* Added for smooth color transition */
+    transition: color 0.3s ease-in-out;
 }
 .menu-wrap a:hover, .menu-wrap a:focus {
     color: #FFF;
@@ -312,9 +305,7 @@ table {
 .content-wrap {
     overflow-y: scroll;
     -webkit-overflow-scrolling: touch;
-    -webkit-transition: -webkit-transform 0.4s;
     transition: transform 0.4s;
-    -webkit-transition-timing-function: cubic-bezier(0.7,0,0.3,1);
     transition-timing-function: cubic-bezier(0.7,0,0.3,1);
 }
 .content {
@@ -328,7 +319,6 @@ table {
     width: 2.5em;
     height: 2.25em;
     font-size: 1.5em;
-    -webkit-transform: translate3d(1.5em,1.5em,0);
     transform: translate3d(1.5em,1.5em,0);
 }
 /* Menu Button */
@@ -357,9 +347,7 @@ table {
 .menu-wrap {
     z-index: 999;
     background: rgba(18, 18, 18, 1);
-    -webkit-transition: width 0.4s, height 0.4s, -webkit-transform 0.4s;
     transition: width 0.4s, height 0.4s, transform 0.4s;
-    -webkit-transition-timing-function: cubic-bezier(0.7,0,0.3,1);
     transition-timing-function: cubic-bezier(0.7,0,0.3,1);
 }
 .menu {
@@ -379,7 +367,7 @@ table {
     text-align: center;
     font-size: 1.2em;
     color: #E26B6B;
-    transition: color 0.3s ease-in-out; /* Added for smooth color transition */
+    transition: color 0.3s ease-in-out;
 }
 .icon-list a span {
     display: block;
@@ -391,49 +379,39 @@ table {
 }
 /* Shown menu */
 .show-menu .content-wrap {
-    -webkit-transition-delay: 0s;
     transition-delay: 0s;
-    -webkit-transform: translate3d(0,125px,0);
     transform: translate3d(0,125px,0);
 }
 .show-menu .menu-wrap {
     width: 100%;
     height: 125px;
-    -webkit-transform: translate3d(0,0,0);
     transform: translate3d(0,0,0);
-    -webkit-transition-delay: 0s;
     transition-delay: 0s;
     border-bottom: 1px solid #E26B6B;
 }
 .show-menu .icon-list a {
     opacity: 1;
-    -webkit-transition: opacity 0.4s 0.4s;
     transition: opacity 0.4s 0.4s;
 }
 .show-menu .icon-list a:nth-child(2) {
-    -webkit-transition-delay: 0.42s;
     transition-delay: 0.42s;
 }
 .show-menu .icon-list a:nth-child(3) {
-    -webkit-transition-delay: 0.44s;
     transition-delay: 0.44s;
 }
 .show-menu .icon-list a:nth-child(4) {
-    -webkit-transition-delay: 0.46s;
     transition-delay: 0.46s;
 }
 .show-menu .icon-list a:nth-child(5) {
-    -webkit-transition-delay: 0.48s;
     transition-delay: 0.48s;
 }
 .show-menu .icon-list a:nth-child(6) {
-    -webkit-transition-delay: 0.5s;
     transition-delay: 0.5s;
 }
 
 /* Hero */
 .hero {
-    position: relative; /* Added for overlay positioning */
+    position: relative;
     background: url('../img/header-bg.jpg') center top no-repeat;
     background-size: cover;
     height: 100vh;
@@ -446,7 +424,7 @@ table {
     left: 0;
     width: 100%;
     height: 100%;
-    background: rgba(0, 0, 0, 0.5); /* Dark overlay */
+    background: rgba(0, 0, 0, 0.5);
 }
 .hero h1 {
     font-size: 4em;
@@ -455,8 +433,8 @@ table {
     font-weight: 700;
     line-height: 1.2;
     text-transform: uppercase;
-    position: relative; /* Ensures text is above overlay */
-    z-index: 1; /* Ensures text is above overlay */
+    position: relative;
+    z-index: 1;
 }
 .hero h1 span {
     color: red;
@@ -470,26 +448,22 @@ table {
     letter-spacing: 0.2em;
     line-height: 1.5;
     text-transform: uppercase;
-    position: relative; /* Ensures text is above overlay */
-    z-index: 1; /* Ensures text is above overlay */
+    position: relative;
+    z-index: 1;
 }
 .hero p {
     letter-spacing: 1px;
     color: #e0e0e0;
     font-size: 1em;
-    position: relative; /* Ensures text is above overlay */
-    z-index: 1; /* Ensures text is above overlay */
+    position: relative;
+    z-index: 1;
 }
-/* Boucing Arrow Animation */
+/* Bouncing Arrow Animation */
 @keyframes arrowbounce {
     from {
-        -webkit-transform: translateY(0);
-        -moz-transform: translateY(0);
         transform: translateY(0);
     }
     to {
-        -webkit-transform: translateY(-20px);
-        -moz-transform: translateY(-20px);
         transform: translateY(-20px);
     }
 }
@@ -507,9 +481,6 @@ table {
 }
 .scrollto--arrow img {
     animation: arrowbounce 1s alternate infinite;
-    -moz-animation: arrowbounce 1s alternate infinite;
-    -webkit-animation: arrowbounce 1s alternate infinite;
-    -o-animation: arrowbounce 1s alternate infinite;
 }
 
 /* Intro */
@@ -532,9 +503,6 @@ h1.arrow span {
 /* About */
 .about-image {
     height: 400px;
-    -webkit-background-size: cover;
-    -moz-background-size: cover;
-    -o-background-size: cover;
     background-size: cover;
 }
 .color-bg {
@@ -590,7 +558,6 @@ h1.arrow span {
     border-radius: 50%;
     box-shadow: 0 0 0 0 rgba(0,0,0,0.0);
     margin-bottom: 40px;
-    -webkit-transition: all .3s ease-out;
     transition: all .3s ease-out;
     border: 1px solid #E26B6B;
 }
@@ -599,13 +566,10 @@ h1.arrow span {
     border: 1px solid #E26B6B;
 }
 .services .item [class*=fa] {
-    -webkit-transition: all .3s ease-out;
     transition: all .3s ease-out;
 }
 .services .item:hover [class*=fa] {
-    -webkit-transform: scale(1.2);
     transform: scale(1.2);
-    -webkit-transition: all .3s ease-out;
     transition: all .3s ease-out;
     color: #121212;
 }
@@ -622,7 +586,6 @@ i.respons {
     font-size: 15px;
     color: #E26B6B;
     border-radius: 50%;
-    -webkit-transition: all .3s ease-out;
     transition: all .3s ease-out;
     border: 1px solid #E26B6B;
 }
@@ -634,8 +597,6 @@ i.respons {
     float: left;
     height: 100%;
     box-shadow: inset -15px -11px 40px -6px rgba(0,0,0,0.1);
-    -moz-box-shadow: inset -15px -11px 40px -6px rgba(0,0,0,0.1);
-    -webkit-box-shadow: inset -15px -11px 40px -6px rgba(0,0,0,0.1);
     z-index: 1;
 }
 .fluid-white {
@@ -683,12 +644,11 @@ i.respons {
     width: 100%;
 }
 img.grayscale {
-    filter: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg'><filter id='grayscale'><feColorMatrix type='matrix' values='0.3333 0.3333 0.3333 0 0 0.3333 0.3333 0 0 0.3333 0 0 0 0 1 0'/></filter></svg>#grayscale");
-    /* Firefox 3.5+,IE10 */ filter: gray;
-    /* IE6-9 */ -webkit-filter: grayscale(100%);
-    /* Chrome 19+& Safari 6+*/ -webkit-transition: all .6s ease;
-    /* Fade to color for Chrome and Safari */ -webkit-backface-visibility: hidden;
-    /* Fix for transition flickering */
+    filter: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg'><filter id='grayscale'><feColorMatrix type='matrix' values='0.3333 0.3333 0 0 0.3333 0.3333 0 0 0.3333 0 0 0 0 1 0'/></filter></svg>#grayscale");
+    filter: gray;
+    -webkit-filter: grayscale(100%);
+    transition: all .6s ease;
+    -webkit-backface-visibility: hidden;
 }
 img.grayscale:hover {
     filter: none;
@@ -706,7 +666,6 @@ img.grayscale:hover {
     padding-left: 15px;
 }
 .effects .img {
-    position: relative;
     position: relative;
     z-index: 1;
     overflow: hidden;
@@ -734,9 +693,6 @@ img.grayscale:hover {
     -webkit-filter: grayscale(0%);
     overflow: hidden;
     transition: all 0.5s;
-    -webkit-transition: all 0.5s;
-    -moz-transition: all 0.5s;
-    -o-transition: all 0.5s;
 }
 .overlay-effect .img i {
     font-size: 30px;
@@ -760,20 +716,12 @@ img.grayscale:hover {
     opacity: 1;
 }
 .img img {
-    width: -webkit-calc(100%+40px) !important;
     width: calc(100%+40px) !important;
-    -webkit-transition: opacity 0.35s, -webkit-transform 0.35s;
     transition: opacity 0.35s, transform 0.35s;
-    -moz-transition: opacity 0.35s, -moz-transform 0.35s;
-    -o-transition: opacity 0.35s, -o-transform 0.35s;
-    -webkit-transform: translate3d(-40px,0,0);
     transform: translate3d(-40px,0,0);
-    -ms-transform: translate3d(-40px,0,0);
 }
 .img:hover img {
-    -webkit-transform: translate3d(0,0,0);
     transform: translate3d(0,0,0);
-    -ms-transform: translate3d(0,0,0);
 }
 .hype {
     position: absolute;
@@ -818,9 +766,6 @@ img.grayscale:hover {
     text-transform: uppercase;
     letter-spacing: 1px;
     transition: all 0.5s ease;
-    -moz-transition: all 0.5s ease;
-    -webkit-transition: all 0.5s ease;
-    -o-transition: all 0.5s ease;
 }
 .subscribe input[type=submit]:hover {
     background: #FFF;
@@ -886,8 +831,8 @@ ul.social-buttons li:last-child {
     font-size: 17px;
     line-height: 40px;
     text-align: center;
-    border-radius: 20px; /* Making the buttons rounded */
-    transition: background 0.3s, color 0.3s; /* Adding smooth transition */
+    border-radius: 20px;
+    transition: background 0.3s, color 0.3s;
 }
 .social-btn:hover, .social-btn:focus {
     background: #FFF;
@@ -914,7 +859,7 @@ ul.social-buttons li:last-child {
     right: 0;
     margin-left: auto;
     margin-right: auto;
-    border-radius: 50%; /* Making the button circular */
+    border-radius: 50%;
 }
 .up-btn:hover, up-btn:focus {
     color: #121212;
@@ -1062,11 +1007,9 @@ ul.slides li {
 }
 .delay-05s {
     animation-delay: 0.5s;
-    -webkit-animation-delay: 0.5s;
 }
 .delay-1s {
     animation-delay: 1s;
-    -webkit-animation-delay: 1s;
 }
 .wp3 {
     background: url('../img/iphone-bg.png') no-repeat center center;
@@ -1241,7 +1184,7 @@ ul.slides li {
 /* Navigation */
 .menu-wrap a {
     color: #E26B6B;
-    transition: color 0.3s ease-in-out; /* Added for smooth color transition */
+    transition: color 0.3s ease-in-out;
 }
 .menu-wrap a:hover, .menu-wrap a:focus {
     color: white;
