@@ -1209,7 +1209,6 @@ ul.slides li {
     color: #E26B6B;
     margin-bottom: 20px;
 }
-/* Background Image Glitter Transition Effect */
 /* Initial Glass Effect */
 .hero {
   position: relative;
@@ -1236,8 +1235,4 @@ ul.slides li {
 .hero.glass-transition::before {
   backdrop-filter: blur(0px); /* Clear the blur effect */
   background: rgba(255, 255, 255, 0); /* Make the overlay transparent */
-}
-
-.hero.glass-transition::before {
-  transition: backdrop-filter 5s ease-in-out, background 5s ease-in-out;
 }
