@@ -1209,3 +1209,35 @@ ul.slides li {
     color: #E26B6B;
     margin-bottom: 20px;
 }
+/* Background Image Glitter Transition Effect */
+/* Initial Glass Effect */
+.hero {
+  position: relative;
+  background: url('../img/header-bg.jpg') center top no-repeat;
+  background-size: cover;
+  height: 100vh;
+  background-color: #1e1e1e;
+}
+
+.hero::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(255, 255, 255, 0.2); /* Light overlay to simulate glass */
+  backdrop-filter: blur(10px); /* Initial heavy blur */
+  z-index: 1;
+  transition: backdrop-filter 5s ease-in-out, background 5s ease-in-out;
+}
+
+/* Transition to Original Background */
+.hero.glass-transition::before {
+  backdrop-filter: blur(0px); /* Clear the blur effect */
+  background: rgba(255, 255, 255, 0); /* Make the overlay transparent */
+}
+
+.hero.glass-transition::before {
+  transition: backdrop-filter 5s ease-in-out, background 5s ease-in-out;
+}
